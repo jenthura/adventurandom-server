@@ -8,11 +8,6 @@ CREATE TABLE attack (
  attack_name text NOT NULL
 );
 
-ALTER TABLE attack
-    ADD COLUMN
-        attacker INTEGER REFERENCES char_attack(char_id)
-        ON DELETE SET NULL;
-
 
 
 
