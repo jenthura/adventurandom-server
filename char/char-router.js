@@ -12,7 +12,7 @@ charRouter.route('/char').get((req, res, next) => {
     .catch(next);
 });
 
-charRouter.route('/char/:id').get((req, res, next) => {
+charRouter.route('/:id').get((req, res, next) => {
   CharService.getById(req.app.get('db'), req.params.id)
     .then((char) => {
       res.json(char);
@@ -20,7 +20,7 @@ charRouter.route('/char/:id').get((req, res, next) => {
     .catch(next);
 });
 
-charRouter.route('/char/:id/attacks').get((req, res, next) => {
+charRouter.route('/:id/attacks').get((req, res, next) => {
   CharService.getAttacks(req.app.get('db'), req.params.id)
     .then((char) => {
       res.json(char);

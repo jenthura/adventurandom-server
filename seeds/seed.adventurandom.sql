@@ -24,4 +24,28 @@ VALUES
     (2, 3),
     (3, 1);
 
+INSERT INTO monster
+    (monster_name, hitpoints, damage_die)
+VALUES
+    ('Goblin', 12, 6),
+    ('Vampire', 35, 8),
+    ('Bear', 40, 12);
+
+INSERT INTO location_flavor
+    (location_flavor_string)
+VALUES
+    ('of the Twisted Root'),
+    ('of the Mad King'),
+    ('from Hell'),
+    ('of Broken Promises'),
+    ('of Dreams'),
+    ('Undying'),
+    ('Full of Bones'),
+    ('near Zadash'),
+    ('of Cracked Pearls'),
+    ('that is not a Castle'),
+    ('that is not a Graveyard'),
+    ('that is not a Dungeon'),
+    ('that is not a Forest');
+
 COMMIT;

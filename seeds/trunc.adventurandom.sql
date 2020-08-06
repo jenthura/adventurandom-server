@@ -3,5 +3,6 @@ TRUNCATE
   char_attack,
   attack,
   location,
-  monster
+  monster,
+  location_flavor
   RESTART IDENTITY CASCADE;
