@@ -1,3 +1,4 @@
-## Deploying
+This project was built by Chatchawan L Suwaratana for Thinkful a solo capstone project.
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+This is the server for the adventurandom client
+It delivers data about monsters, characters, locations and flavor text.
