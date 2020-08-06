@@ -22,9 +22,9 @@ app.use(helmet());
 app.use('/char', charRouter);
 app.use('/monster', monsterRouter);
 app.use('/location', locationRouter);
-// app.get('/', (req, res) => {
-//   res.send('Hello, world!')
-// });
+app.get('/', (req, res) => {
+  res.send('Hello, world!')
+});
 
 app.use(function errorHandler(error, req, res, next) {
   let response;
