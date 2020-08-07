@@ -10,11 +10,13 @@ const locationRouter = require('../location/location-router');
 
 const app = express();
 
-app.use(
-  morgan(NODE_ENV === 'production' ? 'tiny' : 'common', {
-    skip: () => NODE_ENV === 'test',
-  })
-);
+app.use(morgan('combined'));
+
+// app.use(
+//   morgan(NODE_ENV === 'production' ? 'tiny' : 'dev', {
+//     skip: () => NODE_ENV === 'test',
+//   })
+// );
 
 app.use(cors());
 app.use(helmet());
