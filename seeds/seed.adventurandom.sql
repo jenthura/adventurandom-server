@@ -1,3 +1,5 @@
+-- psql -U postgres -d adventurandom -f ./seeds/seed.adventurandom.sql
+
 BEGIN;
 
 INSERT INTO char

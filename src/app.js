@@ -12,11 +12,11 @@ const app = express();
 
 app.use(morgan('combined'));
 
-// app.use(
-//   morgan(NODE_ENV === 'production' ? 'tiny' : 'dev', {
-//     skip: () => NODE_ENV === 'test',
-//   })
-// );
+app.use(
+  morgan(NODE_ENV === 'production' ? 'tiny' : 'dev', {
+    skip: () => NODE_ENV === 'test',
+  })
+);
 
 app.use(cors());
 app.use(helmet());
@@ -25,13 +25,13 @@ app.use('/char', charRouter);
 app.use('/monster', monsterRouter);
 app.use('/location', locationRouter);
 app.get('/', (req, res) => {
-  res.send('Hello, world!')
+  res.send('Hello, world!');
 });
 
 app.use(function errorHandler(error, req, res, next) {
   let response;
   if (NODE_ENV === 'production') {
-    response = { error: error.message, object: error  };
+    response = { error: error.message, object: error };
   } else {
     console.error(error);
     response = { error: error.message, object: error };
