@@ -1,4 +1,3 @@
-// const CharService = require('../char/char-service');
 const knex = require('knex');
 const app = require('../src/app');
 const { cleanTables, makeFixtures, seedTables } = require('./test-helpers');

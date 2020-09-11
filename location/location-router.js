@@ -1,9 +1,7 @@
 const express = require('express');
 const LocationService = require('./location-service');
-// const { requireAuth } = require('../middleware/jwt-auth');
-
 const locationRouter = express.Router();
-
+//return an array of all location objects
 locationRouter.route('/').get((req, res, next) => {
   LocationService.getAllLocation(req.app.get('db'))
     .then((location) => {

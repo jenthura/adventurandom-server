@@ -1,9 +1,7 @@
 const express = require('express');
 const MonsterService = require('./monster-service');
-// const { requireAuth } = require('../middleware/jwt-auth');
-
 const monsterRouter = express.Router();
-
+//return an array of all monster objects
 monsterRouter.route('/').get((req, res, next) => {
   MonsterService.getAllMonster(req.app.get('db'))
     .then((monster) => {
@@ -11,7 +9,7 @@ monsterRouter.route('/').get((req, res, next) => {
     })
     .catch(next);
 });
-
+//return one monster object by id
 monsterRouter.route('/:id').get((req, res, next) => {
   MonsterService.getById(req.app.get('db'), req.params.id)
     .then((monster) => {

@@ -6,7 +6,7 @@ const CharService = {
   getById(db, id) {
     return CharService.getAllChar(db).where('char.id', id).first();
   },
-
+  //many-to-many table join, characters can share attacks and can also be assigned many attacks
   getAttacks(db, id) {
     return db
       .select('attack.attack_name', 'attack.damage_die')
